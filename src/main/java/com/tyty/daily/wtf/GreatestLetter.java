@@ -1,10 +1,7 @@
 package com.tyty.daily.wtf;
 
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 public class GreatestLetter {
 
@@ -19,7 +16,7 @@ public class GreatestLetter {
         System.out.println(ss);
     }
 
-    public static String test(String s){
+    public static String test(String s) {
         Set<Character> ht = new HashSet<>();
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);

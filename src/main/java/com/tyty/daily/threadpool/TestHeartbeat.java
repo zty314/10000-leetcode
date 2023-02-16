@@ -16,9 +16,10 @@ public class TestHeartbeat {
         TestHeartbeat heartbeat = new TestHeartbeat();
         ScheduledThreadPoolFactory poolFactory = new ScheduledThreadPoolFactory();
         ScheduledThreadPoolExecutor executor = poolFactory.getInstance();
-        ScheduledFuture scheduledFuture = executor.scheduleAtFixedRate(new PingTask(), 100, 3000, TimeUnit.MILLISECONDS);
-        int i =0;
-        while (i<5){
+        ScheduledFuture scheduledFuture = executor.scheduleAtFixedRate(new PingTask(), 100, 3000,
+                TimeUnit.MILLISECONDS);
+        int i = 0;
+        while (i < 5) {
             i++;
             Thread.sleep(1000L);
         }

@@ -11,6 +11,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 public class TestRunnalbe {
 
     static final ThreadPoolTaskExecutor pool = new ThreadPoolTaskExecutor();
+
     static {
         pool.initialize();
     }
@@ -28,8 +29,9 @@ public class TestRunnalbe {
 }
 
 @Data
-class Run implements Runnable{
+class Run implements Runnable {
     Integer id = 1;
+
     @Override
     public void run() {
         System.out.println(id);

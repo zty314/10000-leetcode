@@ -28,7 +28,7 @@ public class MccRedisScript {
         return 0;
     };
 
-    static{
+    static {
         ccc = o -> {
             System.out.println("static block");
             return 0;

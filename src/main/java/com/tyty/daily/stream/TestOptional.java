@@ -16,11 +16,12 @@ public class TestOptional {
         List<Bean> list1 = new ArrayList<>();
         for (int i = 0; i < 30000; i++) {
             //每个元素有名字
-            list1.add(new Bean(i,"aaa" + i, i + 1));
+            list1.add(new Bean(i, "aaa" + i, i + 1));
         }
 //        Optional.of(list1).map(Bean::getName);
     }
 }
+
 @Data
 @AllArgsConstructor
 class Bean {

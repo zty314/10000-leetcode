@@ -8,14 +8,14 @@ package com.tyty.daily.jackson;
  */
 public interface XMLConvert {
 
-	/**
-	 * 对象转XML字符串
-	 */
-	public String toXmlString(Object obj);
+    /**
+     * 对象转XML字符串
+     */
+    public String toXmlString(Object obj);
 
-	/**
-	 * XML字符串转对象
-	 */
-	public <T> T fromXmlString(String jsonString, Class<T> clazz);
+    /**
+     * XML字符串转对象
+     */
+    public <T> T fromXmlString(String jsonString, Class<T> clazz);
 
 }

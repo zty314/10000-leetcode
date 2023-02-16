@@ -19,10 +19,10 @@ public class TestUncaughtExceptionHandler {
             @Override
             public void run() {
                 System.out.println("异常了......");
-                try{
+                try {
                     throw new NullPointerException("我去NPE");
-                }catch (NullPointerException npe){
-                    System.out.println("NullPointerException: "+npe.getMessage());
+                } catch (NullPointerException npe) {
+                    System.out.println("NullPointerException: " + npe.getMessage());
                     npe.getStackTrace();
                 }
             }
@@ -34,7 +34,8 @@ public class TestUncaughtExceptionHandler {
 //                .uncaughtExceptionHandler(new OneUncaughtExceptionHandler())
                 .build();
 
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(10, 100, 1000L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(20), factory, new ThreadPoolExecutor.AbortPolicy());
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(10, 100, 1000L, TimeUnit.MILLISECONDS,
+                new LinkedBlockingQueue<>(20), factory, new ThreadPoolExecutor.AbortPolicy());
 
         executor.execute(runnable);
 //        executor.submit(runnable);
@@ -48,8 +49,8 @@ public class TestUncaughtExceptionHandler {
 
         @Override
         public void uncaughtException(Thread t, Throwable e) {
-            System.out.println("uncaughtException: "+e.getMessage());
-            System.out.println("uncaughtException: "+ Arrays.toString(e.getStackTrace()));
+            System.out.println("uncaughtException: " + e.getMessage());
+            System.out.println("uncaughtException: " + Arrays.toString(e.getStackTrace()));
 
         }
     }

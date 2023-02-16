@@ -10,27 +10,27 @@ import java.util.concurrent.TimeUnit;
  */
 public class IsThreadPoolTerminated {
 
-	public static void main(String[] args) throws InterruptedException {
-		ScheduledExecutorService scheduledExecutorService = new ScheduledThreadPoolFactory().getInstance();
-		scheduledExecutorService.scheduleWithFixedDelay(new Runnable() {
-			@Override
-			public void run() {
-				System.out.println("随地吐痰");
-			}
-		}, 10, 100, TimeUnit.MILLISECONDS);
+    public static void main(String[] args) throws InterruptedException {
+        ScheduledExecutorService scheduledExecutorService = new ScheduledThreadPoolFactory().getInstance();
+        scheduledExecutorService.scheduleWithFixedDelay(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("随地吐痰");
+            }
+        }, 10, 100, TimeUnit.MILLISECONDS);
 
-		Thread.sleep(2000);
+        Thread.sleep(2000);
 
-		System.out.println("关！");
-		scheduledExecutorService.shutdownNow();
-		Thread.sleep(2000);
-		scheduledExecutorService.schedule(new Runnable() {
-			@Override
-			public void run() {
-				System.out.println("捡烟头");
-			}
-		}, 0, TimeUnit.MILLISECONDS);
+        System.out.println("关！");
+        scheduledExecutorService.shutdownNow();
+        Thread.sleep(2000);
+        scheduledExecutorService.schedule(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("捡烟头");
+            }
+        }, 0, TimeUnit.MILLISECONDS);
 
-		Thread.sleep(2000);
-	}
+        Thread.sleep(2000);
+    }
 }

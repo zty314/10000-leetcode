@@ -50,9 +50,9 @@ public class runVolatile {
 //                    }
                     Integer i = example.getI();
 //                    if (i > 50) {
-                        System.out.println("变量i是线程可见的: " + i);
-                        t1.interrupt();
-                        break;
+                    System.out.println("变量i是线程可见的: " + i);
+                    t1.interrupt();
+                    break;
 //                    }
                 }
 //                System.exit(0);

@@ -7,7 +7,7 @@ package com.tyty.daily;
  */
 public class StaticClass {
 
-    public static void staticMethod(){
+    public static void staticMethod() {
         System.out.println("this is a static method");
     }
 

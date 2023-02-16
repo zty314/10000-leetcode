@@ -101,7 +101,8 @@
 //	 * @return
 //	 * @throws Exception
 //	 */
-//	public Object execute(String exp, IExpressContext<String, Object> context, Class<? extends QlExpressHandler>... Clazz) {
+//	public Object execute(String exp, IExpressContext<String, Object> context, Class<? extends QlExpressHandler>...
+//	Clazz) {
 //		try {
 //			checkFunction(Clazz);
 //			return runner.execute(exp, context, null, true, false, null);
@@ -117,7 +118,8 @@
 //	 * @return 结果
 //	 * @throws Exception
 //	 */
-//	public Object execute(String exp, IExpressContext<String, Object> context, List<String> errorList, boolean isCache, Class<? extends QlExpressHandler>... Clazz) {
+//	public Object execute(String exp, IExpressContext<String, Object> context, List<String> errorList, boolean
+//	isCache, Class<? extends QlExpressHandler>... Clazz) {
 //		try {
 //			checkFunction(Clazz);
 //			return runner.execute(exp, context, errorList, isCache, false, null);
@@ -133,7 +135,8 @@
 //	 * @return
 //	 * @throws Exception
 //	 */
-//	public Object execute(String exp, IExpressContext<String, Object> context, boolean isCache, Class<? extends QlExpressHandler>... Clazz) {
+//	public Object execute(String exp, IExpressContext<String, Object> context, boolean isCache, Class<? extends
+//	QlExpressHandler>... Clazz) {
 //		try {
 //			checkFunction(Clazz);
 //			return runner.execute(exp, context, null, isCache, false, null);
@@ -174,7 +177,8 @@
 //	 * @param <T>
 //	 * @return 返回当前函数的结果值
 //	 */
-////	public <T> T result(String conventExpress, Map<String, Object> data, Class<T> type, Class<? extends QlExpressHandler>... Clazz) {
+////	public <T> T result(String conventExpress, Map<String, Object> data, Class<T> type, Class<? extends
+// QlExpressHandler>... Clazz) {
 ////		if (MapUtil.isEmpty(data)) {
 ////			return null;
 ////		}

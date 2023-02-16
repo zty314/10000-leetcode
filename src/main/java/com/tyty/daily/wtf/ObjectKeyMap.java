@@ -12,21 +12,21 @@ import java.util.Map;
  */
 public class ObjectKeyMap {
 
-	@Data
-	static
-	class Key {
-		String name;
-	}
+    @Data
+    static
+    class Key {
+        String name;
+    }
 
-	public static void main(String[] args) {
-		ObjectKeyMap.Key key = new ObjectKeyMap.Key();
-		key.setName("1");
-		Map<Key, Integer> map = new HashMap<>();
-		map.put(key, new Integer(1));
-		key.setName("2");
-		map.put(key, new Integer(2));
-		map.forEach((k, v) -> {
-			System.out.println("map : " + k + " : " + v);
-		});
-	}
+    public static void main(String[] args) {
+        ObjectKeyMap.Key key = new ObjectKeyMap.Key();
+        key.setName("1");
+        Map<Key, Integer> map = new HashMap<>();
+        map.put(key, new Integer(1));
+        key.setName("2");
+        map.put(key, new Integer(2));
+        map.forEach((k, v) -> {
+            System.out.println("map : " + k + " : " + v);
+        });
+    }
 }

@@ -13,17 +13,17 @@ public class FeatureVolatileExample {
     private volatile Integer i = 0;
 //    private Integer i = 0;
 
-    public static Map<String,Integer> rootMap = new HashMap<>();
+    public static Map<String, Integer> rootMap = new HashMap<>();
 
-    public Integer getI(){
+    public Integer getI() {
         return i;
     }
 
-    public void increment(){
+    public void increment() {
         i++;
     }
 
-    public void setI(Integer x){
+    public void setI(Integer x) {
         i = x;
     }
 }

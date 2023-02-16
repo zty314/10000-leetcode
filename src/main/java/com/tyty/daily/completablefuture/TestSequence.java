@@ -36,7 +36,7 @@ public class TestSequence {
             System.out.println("F1结束了！");
             return list1;
         });
-        CompletableFuture<ArrayList<Integer>> future2 = CompletableFuture.supplyAsync(()->{
+        CompletableFuture<ArrayList<Integer>> future2 = CompletableFuture.supplyAsync(() -> {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -45,7 +45,7 @@ public class TestSequence {
             System.out.println("F2结束了！");
             return list2;
         });
-        CompletableFuture<ArrayList<Integer>> future3 = CompletableFuture.supplyAsync(()->{
+        CompletableFuture<ArrayList<Integer>> future3 = CompletableFuture.supplyAsync(() -> {
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
@@ -54,7 +54,7 @@ public class TestSequence {
             System.out.println("F3结束了！");
             return list3;
         });
-        CompletableFuture<ArrayList<Integer>> future4 = CompletableFuture.supplyAsync(()->{
+        CompletableFuture<ArrayList<Integer>> future4 = CompletableFuture.supplyAsync(() -> {
             try {
                 Thread.sleep(10);
             } catch (InterruptedException e) {
@@ -70,9 +70,9 @@ public class TestSequence {
         list5.addAll(future2.join());
         list5.addAll(future3.join());
         list5.addAll(future4.join());
-        list5.forEach(j-> System.out.println(j));
+        list5.forEach(j -> System.out.println(j));
 
         long l2 = System.currentTimeMillis();
-        System.out.println("消耗时间："+(l2-l1));
+        System.out.println("消耗时间：" + (l2 - l1));
     }
 }
